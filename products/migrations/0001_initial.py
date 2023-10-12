@@ -19,6 +19,7 @@ class Migration(migrations.Migration):
                 ('price', models.FloatField()),
                 ('stock', models.IntegerField()),
                 ('image_url', models.CharField(max_length=2083)),
+                ('desc', models.CharField(max_length=2083)),
             ],
         ),
     ]
