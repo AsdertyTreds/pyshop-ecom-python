@@ -1,17 +1,26 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from .models import Product
+from django.core.exceptions import ObjectDoesNotExist
 
-
-# Create your views here.
 def index(request):
-    # return HttpResponse('Hello World')
     products = Product.objects.all()
     return render(request, 'index.html',
                   {'products': products})
 
 
 def new(request):
-    # return HttpResponse('Welcome to PyShop New Arrivals')
-    return render(request, 'index.html')
+    products = Product.objects.all()
+    return render(request, 'news.html',
+                  {'products': products})
 
+
+def item(request, name):
+    try:
+        product = Product.objects.get(name=name)
+        return render(request, 'item.html',
+                  {'product': product})
+    except ObjectDoesNotExist:
+        products = Product.objects.all()
+        return render(request, 'index.html',
+                      {'products': products})

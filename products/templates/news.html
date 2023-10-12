@@ -13,12 +13,11 @@
 			{% for product in products %}
 				<div class="col-md-3" style="margin-bottom: 10px; padding: 0px 5px;">
 					<div class="card" style="">
-                        <div style="background: #020202 url({% static 'images/' %}{{ product.image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat; width: 50%; height: 250px;"></div>
+						<a href="/products/item/{{ product.name }}" class="card-link"><h5 class="card-title text-center"><strong>{{ product.name }}</strong></h5>
+                        <div style="background: #020202 url({% static 'images/' %}{{ product.image_url }}); background-size: cover; background-position: center; background-repeat: no-repeat; margin: auto; width: 50%; height: 250px;"></div></a>
 						<div class="card-body">
-							<h5 class="card-title">{{ product.name }} - <strong>${{ product.price }}</strong></h5>
-							<p class="card-text">Some quick example text to build on the card title and make up the bulk of the
-								card's content.</p>
-							<a href="#" class="btn btn-primary">Add to cart</a>
+							<p class="card-text">{{ product.desc }}</p>
+							<h5 class="card-title"><strong>&#x20BD;{{ product.price }}</strong></h5><a href="#" class="btn btn-primary">В корзину</a>
 						</div>
 					</div>
 				</div>
