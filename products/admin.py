@@ -7,7 +7,7 @@ class OfferAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'stock')
+    list_display = ('name', 'price', 'stock', 'desc', 'file_image_url', 'date_add', 'date_end')
 
 
 # Register your models here.

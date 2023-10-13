@@ -18,8 +18,10 @@ class Migration(migrations.Migration):
                 ('name', models.CharField(max_length=255)),
                 ('price', models.FloatField()),
                 ('stock', models.IntegerField()),
-                ('image_url', models.CharField(max_length=2083)),
+                ('file_image_url', models.ImageField()),
                 ('desc', models.CharField(max_length=2083)),
+                ('date_add', models.CharField(max_length=10)),
+                ('date_end', models.CharField(max_length=10)),
             ],
         ),
     ]
