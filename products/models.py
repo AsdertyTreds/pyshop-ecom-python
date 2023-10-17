@@ -7,17 +7,29 @@ def product_directory_path(instance, filename):
 
 
 class Product(models.Model):
-    name = models.CharField(max_length=255)
-    price = models.FloatField()
-    stock = models.IntegerField()
-    desc = models.CharField(max_length=2083)
-    file_image_url = models.ImageField(upload_to=product_directory_path)
-    date_add = models.DateField()
-    date_end = models.DateField()
+    """ Модель продукция """
+    name = models.CharField("Название", max_length=255)
+    price = models.FloatField("Цена")
+    stock = models.IntegerField("Количество")
+    desc = models.TextField("Описание", max_length=2083)
+    file_image_url = models.ImageField("Изображение", upload_to=product_directory_path)
+    date_add = models.DateField("Дата создания", auto_now=True)
+    date_end = models.DateField("Дата окончания")
 
+    class Meta:
+        verbose_name = 'Флорариум'
+        verbose_name_plural = 'Флорариумы'
+
+    def __str__(self):
+        """String for representing the ModelName object (in Admin site etc.)."""
+        return self.name
 
 class Offer(models.Model):
-    code = models.CharField(max_length=10)
-    description = models.CharField(max_length=255)
-    discount = models.FloatField()
+    """ Модель скидок """
+    code = models.CharField("Промокод", max_length=10)
+    description = models.CharField("Описание", max_length=255)
+    discount = models.FloatField("Размер, в %")
 
+    class Meta:
+        verbose_name = 'Скидка'
+        verbose_name_plural = 'Скидки'
