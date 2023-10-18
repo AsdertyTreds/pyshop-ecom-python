@@ -4,13 +4,17 @@
 {% load i18n %}
   <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta property="og:title" content="{% trans 'Florarium' %}" />
+    <meta about="{% trans 'Florarium' %}" />
+    <meta name="description" property="og:description" content="{% trans 'Florarium' %}" />
+    <meta name="keywords" content="{% trans 'Florarium' %}" />
+    <meta property="og:url" content="{{ url }}" />
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}" >
-    <title>Флорариумы</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}" />
+    <title>{% trans "Florarium" %}</title>
   </head>
   <body style="background: #fdfdfd;">
     <nav class="navbar navbar-expand-lg navbar-light bg-light">

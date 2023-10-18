@@ -1,5 +1,7 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from django.urls import reverse
+
 
 def product_directory_path(instance, filename):
     # file will be uploaded to MEDIA_ROOT/product_name_<filename>
