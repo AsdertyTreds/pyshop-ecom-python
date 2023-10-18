@@ -4,6 +4,7 @@ from collections import namedtuple
 from django.db import models
 from products.models import Product
 from products.models import Offer
+from django.utils.translation import gettext_lazy as _
 
 
 class TestProductDirectoryPath(TestCase):
@@ -24,7 +25,7 @@ class ProductModelTest(TestCase):
     def test_name_label(self):
         product = Product.objects.get(id=1)
         field_label = product._meta.get_field('name').verbose_name
-        self.assertEqual(field_label, 'name')
+        self.assertEqual(field_label, _('name'))
 
     def test_first_name_max_length(self):
         product = Product.objects.get(id=1)

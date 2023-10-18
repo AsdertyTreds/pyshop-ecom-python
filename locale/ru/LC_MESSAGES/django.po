@@ -1,0 +1,103 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: django\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-18 13:02+0300\n"
+"PO-Revision-Date: 2023-10-18 22:55+0000\n"
+"Last-Translator: Panasoft\n"
+"Language-Team: Russian (http://www.transifex.com/django/django/language/"
+"ru/)\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+#: .\products\models.py:11
+msgid "Name"
+msgstr "Название"
+
+#: .\products\models.py:12
+msgid "Price"
+msgstr "Цена"
+
+#: .\products\models.py:13
+msgid "Count"
+msgstr "Количество"
+
+#: .\products\models.py:14 .\products\models.py:31
+msgid "Description"
+msgstr "Описание"
+
+#: .\products\models.py:15
+msgid "Image"
+msgstr "Изображение"
+
+#: .\products\models.py:16
+msgid "Date add"
+msgstr "Дата создания"
+
+#: .\products\models.py:17
+msgid "Date off"
+msgstr "Дата окончания"
+
+#: .\products\models.py:20
+msgid "Florarium"
+msgstr "Флорариум"
+
+#: .\products\models.py:21
+msgid "Florariums"
+msgstr "Флорариумы"
+
+#: .\products\models.py:30
+msgid "Promo"
+msgstr "Промокод"
+
+#: .\products\models.py:32
+msgid "Size in %"
+msgstr "Размер, в %"
+
+#: .\products\models.py:35
+msgid "Discount"
+msgstr "Скидка"
+
+#: .\products\models.py:36
+msgid "Discounts"
+msgstr "Скидки"
+
+#: .\pyshop\settings.py:127
+msgid "English"
+msgstr "Английский"
+
+#: .\pyshop\settings.py:128
+msgid "Russian"
+msgstr "Русский"
+
+msgid "Top"
+msgstr "Наверх"
+
+msgid "All products are presented here"
+msgstr "Здесть представлена вся продукция"
+
+msgid "All products"
+msgstr "Все работы"
+
+msgid "New products are presented here"
+msgstr "Здесть представлена новая продукция"
+
+msgid "News"
+msgstr "Новинки"
+
+#: .\templates\admin\base_site.html:3
+msgid "Django site admin"
+msgstr "Администрирование"
+
+#: .\templates\admin\base_site.html:6
+msgid "Django administration"
+msgstr "Администрирование"
+
+#: .\tests\test_models.py:28
+msgid "name"
+msgstr "Название"

@@ -1,9 +1,10 @@
 {% extends 'base.html' %}
 {% block content %}
+{% load i18n %}
     <div class="jumbotron jumbotron-fluid text-center">
       <div class="container">
-        <h1 class="display-5">Новинки</h1>
-        <p class="lead">Новые работы</p>
+        <h1 class="display-5">{% trans "News" %}</h1>
+        <p class="lead">{% trans "New products are presented here" %}</p>
       </div>
     </div>
 
