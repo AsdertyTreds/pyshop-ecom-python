@@ -101,3 +101,6 @@ msgstr "Администрирование"
 #: .\tests\test_models.py:28
 msgid "name"
 msgstr "Название"
+
+msgid "Products"
+msgstr "Продукция"
