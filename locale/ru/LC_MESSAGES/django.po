@@ -79,13 +79,13 @@ msgid "Top"
 msgstr "Наверх"
 
 msgid "All products are presented here"
-msgstr "Здесть представлена вся продукция"
+msgstr "Здесь представлена вся продукция"
 
 msgid "All products"
 msgstr "Все работы"
 
 msgid "New products are presented here"
-msgstr "Здесть представлена новая продукция"
+msgstr "Здесь представлена новая продукция"
 
 msgid "News"
 msgstr "Новинки"
