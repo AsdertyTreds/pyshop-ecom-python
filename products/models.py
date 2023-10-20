@@ -10,6 +10,7 @@ def product_directory_path(instance, filename):
 
 class Product(models.Model):
     """ Модель продукция """
+    id = models.IntegerField(primary_key=True)
     name = models.CharField(_("Name"), max_length=255)
     price = models.FloatField(_("Price"))
     stock = models.IntegerField(_("Count"))

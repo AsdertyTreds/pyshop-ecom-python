@@ -11,16 +11,16 @@ def index(request):
                    'url': request.build_absolute_uri()})
 
 
-def new(request):
+def news(request):
     products = Product.objects.all()
     return render(request, 'news.html',
                   {'products': products,
                    'url': request.build_absolute_uri()})
 
 
-def item(request, name):
+def item(request, id):
     try:
-        product = Product.objects.get(name=name)
+        product = Product.objects.get(id=id)
         return render(request, 'item.html',
                       {'product': product,
                        'url': request.build_absolute_uri()})
