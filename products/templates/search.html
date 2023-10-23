@@ -17,7 +17,7 @@
 						<a href="{% url 'item' product.id %}" class="card-link"><h5 class="card-title text-center"><strong>{{ product.name }}</strong></h5>
                         <div style="background: #020202 url({{ product.file_image_url.url }}); background-size: cover; background-position: center; background-repeat: no-repeat; margin: auto; width: 50%; height: 250px;"></div></a>
 						<div class="card-body">
-							<p class="card-text text-justify">{{ product.desc }}</p>
+							<p class="card-text text-justify  p-2 text-dark bg-opacity-10" style="background-color: #6c757d2e;">{{ product.desc }}</p>
 							<!--h5 class="card-title"><strong>&#x20BD;{{ product.price }}</strong></h5><a href="#" class="btn btn-primary">В корзину</a-->
 						</div>
 					</div>

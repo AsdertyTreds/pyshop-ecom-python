@@ -5,28 +5,26 @@ from .models import Product
 from django.core.exceptions import ObjectDoesNotExist
 
 
-def index(request):
-    products = Product.objects.all()
-    return render(request, 'index.html',
-                  {'products': products,
-                   'ogurl': request.build_absolute_uri()})
+class Index(ListView):
+    model = Product
+    template_name = 'index.html'
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["products"] = Product.objects.all()
+        context["ogurl"] = self.request.build_absolute_uri()
+        return context
 
 
 class News(ListView):
     model = Product
-    template_name = 'index.html'
+    template_name = 'news.html'
 
-    def get_queryset(self):  # news
-        products = Product.objects.all()
-        return {'products': products,
-                'ogurl': self.request.build_absolute_uri()}
-
-
-def news(request):
-    products = Product.objects.all()
-    return render(request, 'news.html',
-                  {'products': products,
-                   'ogurl': request.build_absolute_uri()})
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context["products"] = Product.objects.all()
+        context["ogurl"] = self.request.build_absolute_uri()
+        return context
 
 
 def item(request, id):
