@@ -8,14 +8,14 @@ def index(request):
     products = Product.objects.all()
     return render(request, 'index.html',
                   {'products': products,
-                   'url': request.build_absolute_uri()})
+                   'ogurl': request.build_absolute_uri()})
 
 
 def news(request):
     products = Product.objects.all()
     return render(request, 'news.html',
                   {'products': products,
-                   'url': request.build_absolute_uri()})
+                   'ogurl': request.build_absolute_uri()})
 
 
 def item(request, id):
@@ -23,7 +23,7 @@ def item(request, id):
         product = Product.objects.get(id=id)
         return render(request, 'item.html',
                       {'product': product,
-                       'url': request.build_absolute_uri()})
+                       'ogurl': request.build_absolute_uri()})
 
     except ObjectDoesNotExist:
         products = Product.objects.all()

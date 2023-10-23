@@ -104,3 +104,13 @@ msgstr "Название"
 
 msgid "Products"
 msgstr "Продукция"
+
+msgid "luxury of nature"
+msgstr "Роскошь природы"
+
+msgid "How to order"
+msgstr "Как сделать заказ"
+
+msgid "Contacts"
+msgstr "Контакты"
+
