@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
+from django.views.generic import ListView
 from .models import Product
 from django.core.exceptions import ObjectDoesNotExist
 
@@ -9,6 +10,16 @@ def index(request):
     return render(request, 'index.html',
                   {'products': products,
                    'ogurl': request.build_absolute_uri()})
+
+
+class News(ListView):
+    model = Product
+    template_name = 'index.html'
+
+    def get_queryset(self):  # news
+        products = Product.objects.all()
+        return {'products': products,
+                'ogurl': self.request.build_absolute_uri()}
 
 
 def news(request):
@@ -29,3 +40,13 @@ def item(request, id):
         products = Product.objects.all()
         return render(request, 'index.html',
                       {'products': products})
+
+
+class SearchResult(ListView):
+    model = Product
+    template_name = 'search.html'
+    context_object_name = 'products'
+    def get_queryset(self):  # new
+        query = self.request.GET.get("q")
+        products = Product.objects.filter(desc__icontains=query) if query is not None else Product.objects.all()
+        return products

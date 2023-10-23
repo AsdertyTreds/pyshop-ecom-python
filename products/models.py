@@ -22,6 +22,7 @@ class Product(models.Model):
     class Meta:
         verbose_name = _("Florarium")
         verbose_name_plural = _("Florariums")
+        ordering = ['date_add']
 
     def __str__(self):
         """String for representing the ModelName object (in Admin site etc.)."""

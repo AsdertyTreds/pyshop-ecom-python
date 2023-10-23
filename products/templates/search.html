@@ -10,6 +10,7 @@
 
     <div class="container">
 	    <div class="row">
+			{% if products %}
 			{% for product in products %}
 				<div class="col-md-4" style="margin-bottom: 10px; padding: 0px 5px;">
 					<div class="card" style="">
@@ -22,6 +23,9 @@
 					</div>
 				</div>
 			{% endfor %}
+			{% else %}
+			<p>По Вашему запросу ничего не найдено</p>
+			{% endif %}
 		</div>
     </div>
 {% endblock %}
