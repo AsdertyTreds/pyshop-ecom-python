@@ -117,7 +117,6 @@ a.bsp-controls:hover {
 
 .bspImgWrapper {
   overflow: hidden;
-  height: 100px;
   background-position-x: center !important;
   background-position-y: center !important;
   background-size: cover !important;

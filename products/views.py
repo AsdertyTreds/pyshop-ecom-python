@@ -42,7 +42,7 @@ def item(request, id):
 
 class SearchResult(ListView):
     model = Product
-    template_name = 'search.html'
+    template_name = 'index.html'
     context_object_name = 'products'
     def get_queryset(self):  # new
         query = self.request.GET.get("q")
