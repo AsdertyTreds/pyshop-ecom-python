@@ -10,10 +10,9 @@
     <meta name="description" property="og:description" content="{% trans 'Luxury of nature' %}" />
     <meta name="keywords" content="{% trans 'Florarium' %} luxury of nature" />
     <meta property="og:url" content="{{ ogurl }}" />
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
     <link rel="shortcut icon" type="image/png" href="{% static 'ico/favicon.ico' %}" />
-    <link rel="stylesheet" href="{% static 'css/photogalery.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/photogallery.css' %}" />
     <title>{% trans "luxury of nature" %}</title>
   </head>
   <body style="background: #fdfdfd;">
@@ -37,8 +36,8 @@
         </ul>
 
         <form action="{% url 'search_result' %}" class="form-inline my-2 my-lg-0" method="get">
-          <input name="q" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Поиск</button>
+          <input name="q" class="form-control mr-sm-2" type="search" placeholder="{% trans 'Search' %}" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">{% trans "Search" %}</button>
         </form>
       </div>
     </nav>
@@ -58,12 +57,10 @@
 
       </div>
     </footer>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="{% static 'js/jquery-3.3.1.slim.min.js' %}"></script>
     <script src="{% static 'js/popper.min.js' %}"></script>
     <script src="{% static 'js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'js/photogalery.js' %}"></script>
+    <script src="{% static 'js/photogallery.js' %}"></script>
 
     <script>
       $(document).ready(function(){
