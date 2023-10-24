@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% block content %}
-
     <div class="jumbotron jumbotron-fluid text-center">
       <div class="container">
         <h1 class="display-5">{{ product.name }}</h1>
@@ -12,7 +11,11 @@
 	    <div class="row">
 				<div class="col" style="margin-bottom: 10px; padding: 0px 5px;">
 					<div class="card" style="">
-                        <div style="background: #fff url({{ product.file_image_url.url }}); background-size: contain; background-position: center; background-repeat: no-repeat; height: 500px;"></div>
+                        <ul class="row first">
+                            <li>
+                            <div class="bspImgWrapper" style="background: #fff url({{ product.file_image_url.url }}); background-size: contain; background-position: center; background-repeat: no-repeat; height: 500px;"></div>
+                            </li>
+                        </ul>
 					</div>
 				</div>
 		</div>
