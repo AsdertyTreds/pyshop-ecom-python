@@ -10,19 +10,19 @@ def product_directory_path(instance, filename):
 
 class Product(models.Model):
     """ Модель продукция """
-    id = models.IntegerField(primary_key=True)
+    id = models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')
     name = models.CharField(_("Name"), max_length=255)
     price = models.FloatField(_("Price"))
     stock = models.IntegerField(_("Count"))
     desc = models.TextField(_("Description"), max_length=2083)
     file_image_url = models.ImageField(_("Image"), upload_to=product_directory_path)
-    date_add = models.DateField(_("Date add"), auto_now=True)
-    date_end = models.DateField(_("Date off"))
+    date_add = models.DateTimeField(_("Date add"), auto_now=True)
+    date_end = models.DateTimeField(_("Date off"))
 
     class Meta:
         verbose_name = _("Florarium")
         verbose_name_plural = _("Florariums")
-        ordering = ['date_add']
+        ordering = ['-date_add']
 
     def __str__(self):
         """String for representing the ModelName object (in Admin site etc.)."""
