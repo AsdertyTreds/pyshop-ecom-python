@@ -7,6 +7,7 @@ To setup the PyShop project, here is the following guidelines:
 * Clone the repository <code>https://github.com/AsdertyTreds/pyshop-ecom-python.git</code>
 * Open Project folder on terminal 
 * Prepare your virtual environment <code>python3 -m venv venv</code> 
+* Add export SERVERNAMES to env
 * Activate your virtual environment <code>source env/bin/activate</code>
 * Install your requirements.txt file <code>pip install -r requirements.txt</code>
 * Create migrations using <code>python3 manage.py makemigrations</code> 
