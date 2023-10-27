@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView
-from .models import Product
+from .models import Product, Gallery
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -30,9 +30,11 @@ class News(ListView):
 def item(request, id):
     try:
         product = Product.objects.get(id=id)
+        images = product.images.all()
         return render(request, 'item.html',
                       {'product': product,
-                       'ogurl': request.build_absolute_uri()})
+                       'ogurl': request.build_absolute_uri(),
+                       'images': images})
 
     except ObjectDoesNotExist:
         products = Product.objects.all()

@@ -13,8 +13,15 @@
 					<div class="card" style="">
                         <ul class="row first justify-content-center">
                             <li>
-                            <div class="bspImgWrapper" style="background: #fff url({{ product.file_image_url.url }}); background-size: contain; background-position: center; background-repeat: no-repeat; height: 500px;"></div>
+                                <div class="bspImgWrapper" style="background: #fff url({{ product.file_image_url.url }}); background-size: contain; background-position: center; background-repeat: no-repeat; height: 500px;"></div>
                             </li>
+                            {% if images %}
+                                {% for image in images %}
+                            <li>
+                                <div class="bspImgWrapper" style="background: #fff url({{ image.image.url }}); background-size: contain; background-position: center; background-repeat: no-repeat; height: 500px;"></div>
+                            </li>
+                                {% endfor%}
+                            {% endif %}
                         </ul>
 					</div>
 				</div>

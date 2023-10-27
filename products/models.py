@@ -42,7 +42,7 @@ class Offer(models.Model):
 
 class Gallery(models.Model):
     """ Модель изображений для продукции """
-    image = models.ImageField(_("Image"),upload_to=product_directory_path)
+    image = models.ImageField(_("Image"),upload_to='gallery')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
 
     class Meta:
