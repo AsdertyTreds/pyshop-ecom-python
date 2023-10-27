@@ -12,10 +12,14 @@ class OfferAdmin(admin.ModelAdmin):
 
 
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ('name', 'price', 'stock', 'desc', 'file_image_url', 'date_add', 'date_end')
+    list_display = ('name', 'price', 'stock', 'desc', 'date_add', 'date_end')
     inlines = [GalleryInline, ]
 
+
+class GalleryAdmin(admin.ModelAdmin):
+    list_display = ('image', 'product')
 
 # Register your models here.
 admin.site.register(Offer, OfferAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Gallery, GalleryAdmin)

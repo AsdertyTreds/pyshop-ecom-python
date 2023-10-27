@@ -36,7 +36,7 @@ msgid "Image"
 msgstr "Изображение"
 
 msgid "Images"
-msgstr "Изображениея"
+msgstr "Изображения"
 
 #: .\products\models.py:16
 msgid "Date add"
