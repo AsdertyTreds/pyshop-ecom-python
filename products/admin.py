@@ -1,5 +1,10 @@
 from django.contrib import admin
-from .models import Product, Offer
+from .models import Product, Offer, Gallery
+
+
+class GalleryInline(admin.TabularInline):
+    fk_name = 'product'
+    model = Gallery
 
 
 class OfferAdmin(admin.ModelAdmin):
@@ -8,6 +13,7 @@ class OfferAdmin(admin.ModelAdmin):
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'stock', 'desc', 'file_image_url', 'date_add', 'date_end')
+    inlines = [GalleryInline, ]
 
 
 # Register your models here.

@@ -38,3 +38,12 @@ class Offer(models.Model):
     class Meta:
         verbose_name = _('Discount')
         verbose_name_plural = _('Discounts')
+
+
+class Gallery(models.Model):
+    image = models.ImageField(_("Image"),upload_to='product_directory_path')
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
+
+    class Meta:
+        verbose_name = _('Image')
+        verbose_name_plural = _('Images')

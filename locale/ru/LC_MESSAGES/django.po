@@ -35,6 +35,9 @@ msgstr "Описание"
 msgid "Image"
 msgstr "Изображение"
 
+msgid "Images"
+msgstr "Изображениея"
+
 #: .\products\models.py:16
 msgid "Date add"
 msgstr "Дата создания"
