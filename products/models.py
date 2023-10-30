@@ -34,6 +34,7 @@ class Offer(models.Model):
     code = models.CharField(_("Promo"), max_length=10)
     description = models.CharField(_("Description"), max_length=255)
     discount = models.FloatField(_("Size in %"))
+    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='offers', default=0)
 
     class Meta:
         verbose_name = _('Discount')

@@ -7,17 +7,23 @@ class GalleryInline(admin.TabularInline):
     model = Gallery
 
 
+class OfferInline(admin.TabularInline):
+    fk_name = 'product'
+    model = Offer
+
+
 class OfferAdmin(admin.ModelAdmin):
     list_display = ('code', 'discount', 'description')
 
 
 class ProductAdmin(admin.ModelAdmin):
     list_display = ('name', 'price', 'stock', 'desc', 'date_add', 'date_end')
-    inlines = [GalleryInline, ]
+    inlines = [GalleryInline, OfferInline]
 
 
 class GalleryAdmin(admin.ModelAdmin):
     list_display = ('image', 'product')
+
 
 # Register your models here.
 admin.site.register(Offer, OfferAdmin)
