@@ -1,6 +1,6 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
-from django.urls import reverse
+# from django.urls import reverse
 
 
 def product_directory_path(instance, filename):
@@ -43,9 +43,19 @@ class Offer(models.Model):
 
 class Gallery(models.Model):
     """ Модель изображений для продукции """
-    image = models.ImageField(_("Image"),upload_to='gallery')
+    image = models.ImageField(_("Image"), upload_to='gallery')
     product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name='images')
 
     class Meta:
         verbose_name = _('Image')
         verbose_name_plural = _('Images')
+
+
+class Pages(models.Model):
+    """ Модель страниц """
+    name = models.CharField(_("Name"), max_length=255)
+    desc = models.TextField(_("Description"))
+
+    class Meta:
+        verbose_name = _('Page')
+        verbose_name_plural = _('Pages')

@@ -117,3 +117,9 @@ msgstr "Как сделать заказ"
 msgid "Contacts"
 msgstr "Контакты"
 
+msgid "Page"
+msgstr "Страница"
+
+msgid "Pages"
+msgstr "Страницы"
+
